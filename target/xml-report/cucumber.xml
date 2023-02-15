@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="15.239">
+    <testcase classname="Giriş işlemleri" name="Giris islemleri" time="14.669">
+        <system-out><![CDATA[Given kullanici "strongUrl" adresine gider..................................passed
+And kullanici login e tiklar................................................passed
+And kullanici 2 saniye bekler...............................................passed
+And kullanici registere tiklar..............................................passed
+And kullanici bilgileri doldurur............................................passed
+Then kullanici register butonuna tiklar.....................................passed
+And kullanici kayıt oludugunu dugrular......................................passed
+]]></system-out>
+    </testcase>
+</testsuite>
