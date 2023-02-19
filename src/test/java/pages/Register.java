@@ -24,4 +24,10 @@ public class Register {
     @FindBy(xpath = "//*[text()=' Register']")
     public WebElement registerButton;
 
+    @FindBy(xpath = "//div[text()='You are registered successfully']")
+    public WebElement registerOnay;
+
+    //@FindBy(xpath = "//*[@id='cq9atum']")
+    //public WebElement registerOnay;
+
 }

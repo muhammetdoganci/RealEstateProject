@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="15.239">
-    <testcase classname="Giriş işlemleri" name="Giris islemleri" time="14.669">
-        <system-out><![CDATA[Given kullanici "strongUrl" adresine gider..................................passed
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="14.679">
+    <testcase classname="Giriş işlemleri" name="Giris islemleri" time="14.23">
+        <failure message="expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[Given kullanici "strongUrl" adresine gider..................................passed
+And kullanici 2 saniye bekler...............................................passed
 And kullanici login e tiklar................................................passed
 And kullanici 2 saniye bekler...............................................passed
 And kullanici registere tiklar..............................................passed
 And kullanici bilgileri doldurur............................................passed
 Then kullanici register butonuna tiklar.....................................passed
-And kullanici kayıt oludugunu dugrular......................................passed
-]]></system-out>
+And kullanici kayit oludugunu dugrular......................................failed
+
+StackTrace:
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at stepDefinitions.RegisterStepDefinition.kullaniciKayitOludugunuDugrular(RegisterStepDefinition.java:58)
+	at ✽.kullanici kayit oludugunu dugrular(file:///C:/Users/w10/IdeaProjects/batch80_Java/RealEstateProject/src/test/resources/features/register.feature:13)
+]]></failure>
     </testcase>
 </testsuite>

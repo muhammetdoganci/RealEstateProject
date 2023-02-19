@@ -47,9 +47,12 @@ public class Driver {
     }
 
     public  static void closeDriver(){
+        /*
         if (driver!=null){ //driver'a deger atanmissa
             driver.close();
             driver=null;
         }
+
+         */
     }
 }

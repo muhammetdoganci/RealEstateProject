@@ -6,7 +6,9 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import pages.Register;
 import utilities.ConfigReader;
 import utilities.Driver;
@@ -41,30 +43,22 @@ public class RegisterStepDefinition {
                 faker.address().zipCode(), Keys.TAB,
                 faker.internet().emailAddress(), Keys.TAB).perform();
 
-        register.password.sendKeys("RealEstate123*", Keys.TAB);
-        actions.sendKeys("RealEstate123*").perform();
-
-        register.registerButton.click();
-
-
-
-                /*
-                faker.name().lastName(), Keys.TAB,
-                faker.phoneNumber().phoneNumber(), Keys.TAB,
-                faker.address().streetAddress(), Keys.TAB,
-                faker.address().zipCode(), Keys.TAB,
-                faker.internet().emailAddress(), Keys.TAB);
-
-                 */
+        actions.sendKeys("RealEstate123*", Keys.TAB,
+        "RealEstate123*", Keys.TAB, Keys.ENTER).perform();
 
     }
 
     @Then("kullanici register butonuna tiklar")
     public void kullaniciRegisterButonunaTiklar() {
+        //register.registerButton.click();
     }
 
-    @And("kullanici kayıt oludugunu dugrular")
-    public void kullaniciKayıtOludugunuDugrular() {
+    @And("kullanici kayit oludugunu dugrular")
+    public void kullaniciKayitOludugunuDugrular() {
+        Assert.assertTrue(register.registerOnay.isDisplayed());
+
+
+
     }
 
     @And("kullanici {int} saniye bekler")
