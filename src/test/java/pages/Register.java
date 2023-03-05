@@ -9,7 +9,7 @@ public class Register {
     public Register(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
-    @FindBy(xpath = "//a[@class=\"nav-link\" and @href=\"/auth\"]")
+    @FindBy(xpath = "//a[@class='nav-link' and @href='/auth']")
     public WebElement login;
 
     @FindBy(xpath = "(//li[@class='nav-item'])[2]")
@@ -24,7 +24,7 @@ public class Register {
     @FindBy(xpath = "//*[text()=' Register']")
     public WebElement registerButton;
 
-    @FindBy(xpath = "//div[text()='You are registered successfully']")
+    @FindBy(xpath = "//*[text()='You are registered successfully']")
     public WebElement registerOnay;
 
     //@FindBy(xpath = "//*[@id='cq9atum']")
